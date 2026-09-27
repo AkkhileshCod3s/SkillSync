@@ -1,0 +1,129 @@
+/* ============ Button animations (site-wide) ============ */
+.btn {
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle-2);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+  opacity: 1;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-forest-ink);
+  outline-offset: 2px;
+}
+
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary CTA arrow nudge on hover */
+.btn-primary .btn-arrow,
+.btn-primary > span[aria-hidden='true'] {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.btn-primary:hover > span[aria-hidden='true'] {
+  transform: translateX(3px);
+}
+
+/* Pastel + outline buttons keep the same motion language */
+.btn-pastel--mint,
+.btn-pastel--teal,
+.btn-pastel--blush,
+.btn-outline,
+.tab-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.btn-pastel--mint:hover,
+.btn-pastel--teal:hover,
+.btn-pastel--blush:hover,
+.btn-outline:hover,
+.tab-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-pastel--mint:active,
+.btn-pastel--teal:active,
+.btn-pastel--blush:active,
+.btn-outline:active,
+.tab-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ============ Input polish (fix consistency/errors) ============ */
+input,
+select,
+textarea {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:hover:not(:focus),
+select:hover:not(:focus),
+textarea:hover:not(:focus) {
+  border-color: var(--color-forest-ink);
+}
+
+/* Tag-input rows and plan-add keep inputs and buttons on one baseline */
+.tag-input-row,
+.plan-add {
+  align-items: stretch;
+}
+
+.tag-input-row .btn,
+.plan-add .btn {
+  flex-shrink: 0;
+}
+
+/* ============ Section button-row spacing (consistent breathing room) ============ */
+.auth-actions,
+.review-form__actions,
+.profile-edit-row,
+.dash-quick,
+.plan-add {
+  margin-top: var(--spacing-16);
+}
+
+.setup-nav {
+  margin-top: var(--spacing-24);
+}
+
+/* Caption under hero/final CTA buttons: tight, per spec */
+.hero__caption {
+  margin-top: var(--spacing-16);
+}
+
+/* Respect reduced motion for all new animations */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn-primary > span[aria-hidden='true'],
+  .btn-pastel--mint,
+  .btn-pastel--teal,
+  .btn-pastel--blush,
+  .btn-outline,
+  .tab-btn {
+    transition: none;
+  }
+
+  .btn:hover,
+  .btn-pastel--mint:hover,
+  .btn-pastel--teal:hover,
+  .btn-pastel--blush:hover,
+  .btn-outline:hover,
+  .tab-btn:hover {
+    transform: none;
+  }
+}
