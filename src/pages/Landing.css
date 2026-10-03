@@ -436,6 +436,22 @@
   }
 }
 
+/* Mobile: keep internal padding comfortable but not cramped inside the inset */
+@media (max-width: 480px) {
+  .perfect-match {
+    padding: var(--spacing-24);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Callout card must never sit flush against the screen edge (it has no
+     .page wrapper) — inset it 16px each side on phones/tablets */
+  .perfect-match {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
     padding: var(--spacing-64) var(--spacing-16) var(--spacing-64);

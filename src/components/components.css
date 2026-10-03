@@ -83,17 +83,37 @@
   background: rgba(0, 0, 0, 0.06);
 }
 
+/* Mobile menu — rectangular dropdown panel (NOT the 9999px pill token) */
 .nav-mobile {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  margin-top: var(--spacing-8);
+  position: absolute;
+  top: calc(100% + var(--spacing-8)); /* sits directly below the nav bar */
+  left: var(--spacing-16);
+  right: var(--spacing-16);
   background: var(--color-cream);
   border: 1px solid var(--color-black);
-  border-radius: var(--radius-nav);
+  border-radius: var(--radius-cards); /* ~20px, NOT 9999px or 50% */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   padding: var(--spacing-16);
-  box-shadow: var(--shadow-subtle-2);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  z-index: 50;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.nav-mobile a,
+.nav-mobile button {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-12) var(--spacing-8);
+  border-radius: 8px;
+}
+
+.nav-mobile a:hover,
+.nav-mobile a:active {
+  background: rgba(0, 0, 0, 0.04);
 }
 
 /* ============ Tagline badge ============ */
@@ -421,12 +441,33 @@
     min-height: 44px;
     display: flex;
     align-items: center;
-    padding: 6px 12px;
+    padding: var(--spacing-12) var(--spacing-8);
   }
 }
 
 @media (min-width: 769px) {
   .nav-mobile {
     display: none;
+  }
+}
+
+/* ============ Navbar fit on small phones (≤480px only) ============
+   Logo + Sign up + hamburger need ~365px; at 375px viewport only 343px is
+   available, so the hamburger was pushed past the screen edge. Tighten only
+   on phones — tablet/desktop nav is untouched. */
+@media (max-width: 480px) {
+  .nav {
+    gap: var(--spacing-8);
+    padding: var(--spacing-8) var(--spacing-12);
+  }
+
+  .nav__logo img {
+    height: 40px !important; /* inline style sets 52px */
+    width: auto;
+  }
+
+  .nav__auth .btn {
+    padding: 10px 14px;
+    font-size: 12px;
   }
 }

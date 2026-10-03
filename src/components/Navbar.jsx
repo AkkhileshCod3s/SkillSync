@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useApp } from '../AppContext'
 import { Button } from './ui'
@@ -16,6 +16,21 @@ export default function Navbar() {
   const navigate = useNavigate()
   const location = useLocation()
   const user = currentUserId ? db.users.find((u) => u.id === currentUserId) : null
+  const headerRef = useRef(null)
+
+  // Close the mobile menu when tapping outside the nav
+  useEffect(() => {
+    if (!open) return
+    const handleOutside = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleOutside)
+    document.addEventListener('touchstart', handleOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleOutside)
+      document.removeEventListener('touchstart', handleOutside)
+    }
+  }, [open])
 
   const links = [
     { to: '/explore', label: 'Explore' },
@@ -31,7 +46,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="nav-wrap">
+    <header className="nav-wrap" ref={headerRef}>
       <nav className="nav">
         <Link to="/" className="nav__logo" onClick={() => setOpen(false)}>
           <img src={logoNavbar} alt="SkillSync" style={{ height: '52px', width: 'auto' }} />
@@ -101,24 +116,16 @@ export default function Navbar() {
               {l.label}
             </NavLink>
           ))}
+          {/* Only auth actions NOT already visible in the top bar (Sign up shows in the
+              top bar; Log in / Log out are hidden there by CSS, so they stay here) */}
           {user ? (
-            <>
-              <Link to={`/profile/${user.id}`} className="nav__link" onClick={() => setOpen(false)}>
-                My Profile
-                </Link>
-              <button className="nav__link" onClick={handleLogout}>
-                Log out
-              </button>
-            </>
+            <button className="nav__link" onClick={handleLogout}>
+              Log out
+            </button>
           ) : (
-            <>
-              <Link to="/login" className="nav__link" onClick={() => setOpen(false)}>
-                Log in
-              </Link>
-              <Link to="/signup" className="nav__link" onClick={() => setOpen(false)}>
-                Sign up
-              </Link>
-            </>
+            <Link to="/login" className="nav__link" onClick={() => setOpen(false)}>
+              Log in
+            </Link>
           )}
         </div>
       )}

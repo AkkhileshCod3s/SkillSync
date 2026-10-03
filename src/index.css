@@ -370,3 +370,74 @@ textarea:focus {
     background-size: 20px 20px;
   }
 }
+
+/* ============ Mobile/tablet edge spacing fix (≤768px only) ============ */
+/* .section { padding: 48px 0 } is declared after .page, so it zeroes out
+   .page's horizontal padding for every "page section" wrapper. Restore the
+   16px side gutter for phones and small tablets only — desktop untouched. */
+@media (max-width: 768px) {
+  .page.section,
+  .page.page--narrow.section {
+    padding-left: var(--spacing-16);
+    padding-right: var(--spacing-16);
+  }
+}
+
+/* ============ Mobile edge spacing + overflow safety (≤480px only) ============ */
+@media (max-width: 480px) {
+  /* Safety net: nothing may make the document wider than the viewport */
+  body {
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  /* Every content wrapper gets ≥16px breathing room from the screen edge */
+  .page,
+  .page--narrow,
+  .auth-page,
+  .hero,
+  .how-header,
+  .how-grid,
+  .why-grid,
+  .final-cta,
+  .landing__footer {
+    padding-left: var(--spacing-16);
+    padding-right: var(--spacing-16);
+  }
+
+  /* Cards fill their container and keep comfortable internal padding (24px) */
+  .sticky-card,
+  .sticky-card--mint,
+  .sticky-card--teal,
+  .sticky-card--blush,
+  .match-card,
+  .session-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: var(--card-padding);
+  }
+
+  /* Stacked card grids: 1 column, consistent spacing between cards */
+  .match-grid,
+  .dash-grid,
+  .profile-grid,
+  .how-grid,
+  .why-grid,
+  .sessions-grid {
+    grid-template-columns: 1fr;
+    column-gap: var(--spacing-16);
+    row-gap: var(--spacing-16);
+  }
+
+  /* Long unbroken words / tags inside cards can't push past the card */
+  .match-card *,
+  .session-card *,
+  .dash-card * {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
