@@ -1,50 +1,53 @@
+/* ============================================================
+   SkillSync — "Flow" design system
+   Cream paper, serif display, lavender accent
+   ============================================================ */
 :root {
   /* Colors */
-  --color-forest-ink: #1a3300;
-  --color-highlighter-yellow: #ffe95c;
-  --color-cream-paper: #fcfaf5;
-  --color-pencil-gray: #b6b6b6;
-  --color-whisper-gray: #f1f1f1;
-  --color-sticky-note-teal: #a8e5e5;
-  --color-sticky-note-mint: #d5f5c2;
-  --color-sticky-note-blush: #f6d0ff;
-  --color-terracotta: #cb5521;
+  --color-cream: #f7f1dc;
+  --color-black: #000000;
+  --color-cream-text-on-black: #f7f1dc;
+  --color-lavender-accent: #dcc6f5;
+  --color-lavender-accent-hover: #cfb3ef;
+  --color-muted-gray: #6b6b6b;
+  --color-muted-gray-on-black: #a8a8a8;
+  --color-hairline: rgba(0, 0, 0, 0.15);
+  --color-hairline-on-black: rgba(247, 241, 220, 0.2);
+
+  /* Card fills */
+  --color-card-dark: #0d0d0d;
 
   /* Fonts */
-  --font-bricolage-grotesque: 'Bricolage Grotesque', Archivo Black, ui-sans-serif, system-ui, sans-serif;
-  --font-inter: 'Inter', system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-roboto-mono: 'Roboto Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
+  --font-serif-display: 'Instrument Serif', 'Canela', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* Type scale */
-  --text-micro: 11px; --leading-micro: 1.3;
-  --text-caption: 14px; --leading-caption: 1.5;
-  --text-body-sm: 16px; --leading-body-sm: 1.5;
-  --text-body: 18px; --leading-body: 1.5;
-  --text-body-lg: 20px; --leading-body-lg: 1.38;
-  --text-subheading: 28px; --leading-subheading: 1.25;
-  --text-heading-sm: 40px; --leading-heading-sm: 1.1;
-  --text-heading: 55px; --leading-heading: 1; --tracking-heading: 2.2px;
-  --text-heading-lg: 66px; --leading-heading-lg: 1; --tracking-heading-lg: 3.3px;
-  --text-display: 90px; --leading-display: 1; --tracking-display: 4.5px;
+  --text-caption: 13px; --leading-caption: 1.5;
+  --text-body: 17px; --leading-body: 1.5;
+  --text-subheading: 22px; --leading-subheading: 1.25;
+  --text-heading-sm: 32px; --leading-heading-sm: 1.1;
+  --text-heading: 48px; --leading-heading: 1.05;
+  --text-display: 64px; --leading-display: 1.05;
+  --text-display-lg: 80px; --leading-display-lg: 1;
 
-  /* Spacing (8px base unit) */
-  --spacing-8: 8px; --spacing-16: 16px; --spacing-24: 24px; --spacing-32: 32px;
-  --spacing-40: 40px; --spacing-48: 48px; --spacing-56: 56px; --spacing-64: 64px;
-  --spacing-80: 80px; --spacing-96: 96px; --spacing-120: 120px;
+  /* Spacing (8px base) */
+  --spacing-8: 8px; --spacing-12: 12px; --spacing-16: 16px; --spacing-24: 24px; --spacing-32: 32px;
+  --spacing-48: 48px; --spacing-64: 64px; --spacing-96: 96px;
 
-  /* Radius */
-  --radius-nav: 16px;
+  /* Radius — fully pill-shaped everywhere */
+  --radius-nav: 9999px;
   --radius-tags: 9999px;
-  --radius-cards: 12px;
-  --radius-buttons: 6px;
+  --radius-buttons: 9999px;
+  --radius-cards: 20px;
+  --radius-pill-widget: 9999px;
 
   /* Shadows */
   --shadow-subtle: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-  --shadow-subtle-2: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+  --shadow-subtle-2: rgba(0, 0, 0, 0.12) 0px 2px 6px 0px;
 
   /* Layout */
   --page-max-width: 1200px;
-  --section-gap: 64px;
+  --section-gap: 0px; /* sections are full-bleed, edge to edge */
   --card-padding: 24px;
   --element-gap: 16px;
 }
@@ -60,9 +63,9 @@ html {
 }
 
 body {
-  font-family: var(--font-inter);
-  background: var(--color-cream-paper);
-  color: var(--color-forest-ink);
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-black);
   font-size: var(--text-body);
   line-height: var(--leading-body);
   -webkit-font-smoothing: antialiased;
@@ -74,23 +77,23 @@ body {
 }
 
 a {
-  color: var(--color-forest-ink);
+  color: var(--color-black);
   text-decoration: none;
 }
 
 button {
-  font-family: var(--font-inter);
+  font-family: var(--font-sans);
   cursor: pointer;
 }
 
 input,
 select,
 textarea {
-  font-family: var(--font-inter);
-  font-size: var(--text-body-sm);
-  color: var(--color-forest-ink);
-  background: var(--color-cream-paper);
-  border: 1px solid var(--color-pencil-gray);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--color-black);
+  background: var(--color-cream);
+  border: 1px solid var(--color-hairline);
   border-radius: var(--radius-buttons);
   padding: 12px 16px;
   width: 100%;
@@ -99,12 +102,27 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid var(--color-forest-ink);
+  outline: 2px solid var(--color-black);
   outline-offset: 1px;
 }
 
 ::placeholder {
-  color: var(--color-pencil-gray);
+  color: var(--color-muted-gray);
+}
+
+/* ============ Full-bleed alternating sections ============ */
+.sec {
+  position: relative;
+}
+
+.sec--cream {
+  background: var(--color-cream);
+  color: var(--color-black);
+}
+
+.sec--black {
+  background: var(--color-black);
+  color: var(--color-cream-text-on-black);
 }
 
 /* ============ Shared layout helpers ============ */
@@ -119,23 +137,28 @@ textarea:focus {
 }
 
 .page-heading {
-  font-family: var(--font-inter);
-  font-weight: 700;
-  font-size: var(--text-subheading);
-  line-height: var(--leading-subheading);
+  font-family: var(--font-serif-display);
+  font-weight: 400;
+  font-size: var(--text-heading);
+  line-height: var(--leading-heading);
   margin-bottom: var(--spacing-8);
 }
 
 .page-sub {
   font-size: var(--text-body);
   line-height: var(--leading-body);
-  color: var(--color-forest-ink);
+  color: inherit;
   max-width: 640px;
   margin-bottom: var(--spacing-32);
 }
 
 .section {
   padding: var(--spacing-64) 0;
+}
+
+.text-muted {
+  color: var(--color-muted-gray);
+  font-size: var(--text-caption);
 }
 
 /* ============ Buttons ============ */
@@ -160,11 +183,15 @@ textarea:focus {
 }
 
 .btn-primary {
-  background: var(--color-forest-ink);
-  color: var(--color-cream-paper);
-  font-size: var(--text-body-sm);
+  background: var(--color-lavender-accent);
+  color: var(--color-black);
+  font-size: var(--text-body);
   padding: 19px 40px;
   box-shadow: var(--shadow-subtle);
+}
+
+.btn-primary:hover {
+  background: var(--color-lavender-accent-hover);
 }
 
 .btn-primary--compact {
@@ -174,66 +201,94 @@ textarea:focus {
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--color-forest-ink);
-  color: var(--color-forest-ink);
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
   font-size: var(--text-caption);
   padding: 8px 16px;
 }
 
-.btn-pastel--mint {
-  background: var(--color-sticky-note-mint);
-  color: var(--color-forest-ink);
-  font-size: var(--text-caption);
-  padding: 8px 16px;
-  border-radius: var(--radius-buttons);
-  border: none;
-}
-
-.btn-pastel--teal {
-  background: var(--color-sticky-note-teal);
-  color: var(--color-forest-ink);
-  font-size: var(--text-caption);
-  padding: 8px 16px;
-  border-radius: var(--radius-buttons);
-  border: none;
-}
-
+/* Secondary buttons — former pastel variants, now outline treatment */
+.btn-pastel--mint,
+.btn-pastel--teal,
 .btn-pastel--blush {
-  background: var(--color-sticky-note-blush);
-  color: var(--color-forest-ink);
+  background: transparent;
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
   font-size: var(--text-caption);
   padding: 8px 16px;
   border-radius: var(--radius-buttons);
-  border: none;
+}
+
+/* ============ Dark-section component adaptations ============ */
+.sec--black .text-muted {
+  color: var(--color-muted-gray-on-black);
+}
+
+.sec--black .btn-outline,
+.sec--black .btn-pastel--mint,
+.sec--black .btn-pastel--teal,
+.sec--black .btn-pastel--blush {
+  border-color: var(--color-cream-text-on-black);
+  color: var(--color-cream-text-on-black);
+}
+
+.sec--black .btn-outline:hover,
+.sec--black .btn-pastel--mint:hover,
+.sec--black .btn-pastel--teal:hover,
+.sec--black .btn-pastel--blush:hover {
+  background: rgba(247, 241, 220, 0.08);
+}
+
+.sec--black a {
+  color: var(--color-cream-text-on-black);
+}
+
+.sec--black input,
+.sec--black select,
+.sec--black textarea {
+  background: var(--color-card-dark);
+  color: var(--color-cream-text-on-black);
+  border-color: var(--color-hairline-on-black);
+}
+
+.sec--black input:focus,
+.sec--black select:focus,
+.sec--black textarea:focus {
+  outline-color: var(--color-cream-text-on-black);
+}
+
+.sec--black ::placeholder {
+  color: var(--color-muted-gray-on-black);
 }
 
 /* ============ Cards ============ */
 .sticky-card {
-  background: var(--color-cream-paper);
+  background: var(--color-cream);
   border-radius: var(--radius-cards);
   padding: var(--card-padding);
 }
 
 .sticky-card--bordered {
-  border: 1px solid var(--color-forest-ink);
+  border: 1px solid var(--color-black);
 }
 
-.sticky-card--mint {
-  background: var(--color-sticky-note-mint);
-  border-radius: var(--radius-cards);
-  padding: var(--card-padding);
-}
-
-.sticky-card--teal {
-  background: var(--color-sticky-note-teal);
-  border-radius: var(--radius-cards);
-  padding: var(--card-padding);
-}
-
+/* Former pastel variants — now cream cards with black border */
+.sticky-card--mint,
+.sticky-card--teal,
 .sticky-card--blush {
-  background: var(--color-sticky-note-blush);
+  background: var(--color-cream);
+  border: 1px solid var(--color-black);
   border-radius: var(--radius-cards);
   padding: var(--card-padding);
+}
+
+/* Cards sitting on black sections: slightly-lighter-than-black fill */
+.sec--black .sticky-card,
+.sec--black .sticky-card--mint,
+.sec--black .sticky-card--teal,
+.sec--black .sticky-card--blush {
+  background: var(--color-card-dark);
+  border-color: var(--color-hairline-on-black);
 }
 
 /* ============ Forms ============ */
@@ -254,32 +309,32 @@ textarea:focus {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--color-highlighter-yellow);
-  color: var(--color-forest-ink);
+  background: var(--color-lavender-accent);
+  color: var(--color-black);
   border-radius: var(--radius-tags);
   padding: 4px 12px;
-  font-size: var(--text-micro);
+  font-size: var(--text-caption);
   font-weight: 600;
 }
 
 /* ============ Utility ============ */
-.text-muted {
-  color: var(--color-pencil-gray);
-  font-size: var(--text-caption);
-}
-
 .text-whisper {
-  color: var(--color-pencil-gray);
+  color: var(--color-muted-gray);
   font-size: var(--text-caption);
-  background: var(--color-whisper-gray);
-  border-radius: var(--radius-buttons);
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-tags);
   padding: 2px 8px;
   display: inline-block;
 }
 
+.sec--black .text-whisper {
+  color: var(--color-muted-gray-on-black);
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .mono-label {
-  font-family: var(--font-roboto-mono);
-  font-size: var(--text-micro);
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
   letter-spacing: 0.05em;
 }
 
@@ -289,7 +344,23 @@ textarea:focus {
   }
 
   .section {
-    padding: var(--spacing-40) 0;
+    padding: var(--spacing-48) 0;
+  }
+
+  .page-heading {
+    font-size: var(--text-heading-sm);
+  }
+
+  /* Touch targets: 44px minimum tap height on mobile */
+  .btn {
+    min-height: 44px;
+  }
+
+  .tab-btn,
+  .setup-step {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 }
 

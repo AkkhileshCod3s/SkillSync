@@ -20,26 +20,18 @@ export default function Dashboard() {
   const myProfile = buildUserProfiles(db).find((p) => p.id === uid)
 
   return (
-    <div className="page section" style={{ position: 'relative' }}>
+    <>
+    <div className="sec sec--cream" style={{ position: 'relative' }}>
+      <div className="page section">
       <Doodle
         icon={SwapArrowsIcon}
         desktop={{ top: 8, right: 40, size: 44, rotate: -6 }}
         opacity={0.15}
       />
       <Doodle
-        icon={LoopIcon}
-        desktop={{ bottom: -12, left: 16, size: 36, rotate: 8 }}
-        opacity={0.15}
-      />
-      <Doodle
         icon={BookIcon}
         desktop={{ top: '45%', left: 6, size: 30, rotate: 9 }}
         opacity={0.12}
-      />
-      <Doodle
-        icon={SquiggleIcon}
-        desktop={{ top: '70%', right: 4, size: 40, rotate: -7 }}
-        opacity={0.13}
       />
       <Reveal delay={0}>
         <h1 className="page-heading">
@@ -89,6 +81,21 @@ export default function Dashboard() {
         </Reveal>
       </div>
 
+      </div>
+    </div>
+
+    <section className="sec sec--black" style={{ position: 'relative' }}>
+      <Doodle
+        icon={LoopIcon}
+        desktop={{ top: 24, left: 16, size: 36, rotate: 8 }}
+        opacity={0.18}
+      />
+      <Doodle
+        icon={SquiggleIcon}
+        desktop={{ bottom: 24, right: 24, size: 40, rotate: -7 }}
+        opacity={0.16}
+      />
+      <div className="page section">
       <Reveal delay={300}>
         <h2 className="section-sub">Quick actions</h2>
         <div className="dash-quick">
@@ -98,6 +105,8 @@ export default function Dashboard() {
           <Link to="/learning-plan"><Button variant="mint" arrow>Learning Plan</Button></Link>
         </div>
       </Reveal>
-    </div>
+      </div>
+    </section>
+    </>
   )
 }

@@ -30,7 +30,7 @@ export default function Connections() {
   const rows = { sent, received, accepted }[tab]
 
   return (
-    <div className="page section" style={{ position: 'relative' }}>
+    <div className="sec sec--cream" style={{ position: 'relative' }}>
       <Doodle
         icon={LoopIcon}
         desktop={{ top: 4, right: 48, size: 38, rotate: 9 }}
@@ -38,19 +38,20 @@ export default function Connections() {
       />
       <Doodle
         icon={SquiggleIcon}
-        desktop={{ bottom: -16, left: 20, size: 44, rotate: -6 }}
+        desktop={{ bottom: -16, left: 24, size: 44, rotate: -6 }}
         opacity={0.15}
       />
       <Doodle
         icon={StarOutlineIcon}
-        desktop={{ top: '40%', left: 6, size: 28, rotate: -12 }}
+        desktop={{ top: '40%', left: 24, size: 28, rotate: -12 }}
         opacity={0.12}
       />
       <Doodle
         icon={SwapArrowsIcon}
-        desktop={{ top: '65%', right: 4, size: 44, rotate: 7 }}
+        desktop={{ top: '65%', right: 32, size: 44, rotate: 7 }}
         opacity={0.13}
       />
+      <div className="page section">
       <h1 className="page-heading">Connections</h1>
       <p className="page-sub">Manage your swap partners and pending requests.</p>
 
@@ -109,6 +110,7 @@ export default function Connections() {
             </Reveal>
           )
         })}
+      </div>
       </div>
     </div>
   )

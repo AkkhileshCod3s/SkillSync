@@ -27,8 +27,10 @@ export default function Profile() {
 
   if (!profile) {
     return (
-      <div className="page section">
-        <h1 className="page-heading">Profile not found</h1>
+      <div className="sec sec--cream">
+        <div className="page section">
+          <h1 className="page-heading">Profile not found</h1>
+        </div>
       </div>
     )
   }
@@ -68,7 +70,8 @@ export default function Profile() {
   }
 
   return (
-    <div className="page section" style={{ position: 'relative' }}>
+    <>
+    <div className="sec sec--cream" style={{ position: 'relative' }}>
       <Doodle
         icon={LightbulbIcon}
         desktop={{ top: 4, right: 32, size: 40, rotate: 7 }}
@@ -76,19 +79,10 @@ export default function Profile() {
       />
       <Doodle
         icon={SquiggleIcon}
-        desktop={{ bottom: -20, left: 20, size: 48, rotate: -6 }}
+        desktop={{ bottom: 24, left: 24, size: 48, rotate: -6 }}
         opacity={0.15}
       />
-      <Doodle
-        icon={StarOutlineIcon}
-        desktop={{ top: '40%', left: 4, size: 26, rotate: 11 }}
-        opacity={0.12}
-      />
-      <Doodle
-        icon={SwapArrowsIcon}
-        desktop={{ top: '70%', right: 6, size: 42, rotate: -8 }}
-        opacity={0.13}
-      />
+      <div className="page section">
       <Reveal delay={0}>
       <div className="profile-head sticky-card sticky-card--bordered">
         <Avatar initials={profile.avatarInitials} />
@@ -194,7 +188,21 @@ export default function Profile() {
         )}
       </div>
       </Reveal>
+      </div>
+    </div>
 
+    <section className="sec sec--black" style={{ position: 'relative' }}>
+      <Doodle
+        icon={StarOutlineIcon}
+        desktop={{ top: 24, left: 32, size: 26, rotate: 11 }}
+        opacity={0.16}
+      />
+      <Doodle
+        icon={SwapArrowsIcon}
+        desktop={{ bottom: 24, right: 40, size: 42, rotate: -8 }}
+        opacity={0.16}
+      />
+      <div className="page section">
       <div className="sticky-card sticky-card--bordered profile-reviews">
         <h2 className="section-sub">Reviews</h2>
         {reviews.length === 0 && <p className="text-muted">No reviews yet.</p>}
@@ -211,6 +219,8 @@ export default function Profile() {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </section>
+    </>
   )
 }

@@ -1,7 +1,8 @@
+/* ============ Auth pages (single cream section, centered card) ============ */
 .auth-page {
   display: flex;
   justify-content: center;
-  padding: var(--spacing-80) var(--spacing-16) var(--spacing-96);
+  padding: var(--spacing-96) var(--spacing-16);
 }
 
 .auth-card {
@@ -18,7 +19,8 @@
 }
 
 .auth-error {
-  color: var(--color-terracotta);
+  color: var(--color-black);
+  font-weight: 600;
   font-size: var(--text-caption);
   margin-bottom: var(--spacing-16);
 }
@@ -31,6 +33,20 @@
   flex-wrap: wrap;
 }
 
+/* Vertical stack: submit button centered on top, auth-switch link below */
+.auth-submit-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-16);
+}
+
 .auth-actions .text-muted a {
   text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .auth-page {
+    padding: var(--spacing-48) var(--spacing-16);
+  }
 }

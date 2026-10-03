@@ -34,7 +34,7 @@ export default function Navbar() {
     <header className="nav-wrap">
       <nav className="nav">
         <Link to="/" className="nav__logo" onClick={() => setOpen(false)}>
-          <img src={logoNavbar} alt="SkillSync" style={{ height: '36px', width: 'auto' }} />
+          <img src={logoNavbar} alt="SkillSync" style={{ height: '52px', width: 'auto' }} />
         </Link>
 
         <div className="nav__links">

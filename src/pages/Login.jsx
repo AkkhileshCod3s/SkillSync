@@ -25,7 +25,8 @@ export default function Login() {
   }
 
   return (
-    <div className="auth-page" style={{ position: 'relative' }}>
+    <div className="sec sec--cream" style={{ position: 'relative' }}>
+    <div className="auth-page">
       <Doodle
         icon={LoopIcon}
         desktop={{ top: 96, right: '14%', size: 34, rotate: 9 }}
@@ -54,7 +55,7 @@ export default function Login() {
 
           {error && <p className="auth-error">{error}</p>}
 
-          <div className="auth-actions">
+          <div className="auth-actions auth-submit-row">
             <Button variant="primary" arrow type="submit">Log In</Button>
             <span className="text-muted">
               New here? <Link to="/signup">Create an account</Link>
@@ -63,6 +64,7 @@ export default function Login() {
         </form>
         </Reveal>
       </div>
+    </div>
     </div>
   )
 }

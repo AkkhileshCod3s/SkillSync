@@ -86,6 +86,7 @@ export default function ProfileSetup() {
   const steps = ['Profile', 'Can teach', 'Want to learn', 'Level & availability']
 
   return (
+    <div className="sec sec--cream">
     <div className="page page--narrow setup-page">
       <h1 className="page-heading">Set up your profile</h1>
       <p className="page-sub">Four quick steps — you can edit everything later.</p>      <Reveal delay={0} key={`steps-${step}`}>
@@ -231,6 +232,7 @@ export default function ProfileSetup() {
         </div>
       </div>
       </Reveal>
+    </div>
     </div>
   )
 }

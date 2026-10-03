@@ -77,7 +77,7 @@ export default function Sessions() {
     : []
 
   return (
-    <div className="page section" style={{ position: 'relative' }}>
+    <div className="sec sec--cream" style={{ position: 'relative' }}>
       <Doodle
         icon={BookIcon}
         desktop={{ top: 8, right: 40, size: 40, rotate: 6 }}
@@ -90,14 +90,15 @@ export default function Sessions() {
       />
       <Doodle
         icon={LoopIcon}
-        desktop={{ top: '45%', left: 4, size: 28, rotate: 10 }}
+        desktop={{ top: '45%', left: 24, size: 28, rotate: 10 }}
         opacity={0.12}
       />
       <Doodle
         icon={StarOutlineIcon}
-        desktop={{ top: '70%', right: 8, size: 30, rotate: -11 }}
+        desktop={{ top: '70%', right: 32, size: 30, rotate: -11 }}
         opacity={0.13}
       />
+      <div className="page section">
       <Reveal delay={0}>
         <h1 className="page-heading">Sessions</h1>
         <p className="page-sub">Schedule skill swaps with your connections and review completed ones.</p>
@@ -206,6 +207,7 @@ export default function Sessions() {
         </Reveal>
         </div>
       )}
+      </div>
     </div>
   )
 }

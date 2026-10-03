@@ -16,7 +16,7 @@ export default function MatchCard({ profile, match, onConnect, connected }) {
         <div className="match-card__score">
           {match.perfect && (
             <span className="badge-yellow">
-              <Star size={14} fill="var(--color-highlighter-yellow)" stroke="var(--color-forest-ink)" /> Perfect Match
+              <Star size={14} fill="var(--color-black)" stroke="var(--color-black)" /> Perfect Match
             </span>
           )}
           <span className="match-card__pct">{match.score}%</span>

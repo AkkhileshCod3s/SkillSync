@@ -29,7 +29,8 @@ export default function Signup() {
   }
 
   return (
-    <div className="auth-page" style={{ position: 'relative' }}>
+    <div className="sec sec--cream" style={{ position: 'relative' }}>
+    <div className="auth-page">
       <Doodle
         icon={StarOutlineIcon}
         desktop={{ top: 96, left: '12%', size: 36, rotate: -8 }}
@@ -68,7 +69,7 @@ export default function Signup() {
 
           {error && <p className="auth-error">{error}</p>}
 
-          <div className="auth-actions">
+          <div className="auth-actions auth-submit-row">
             <Button variant="primary" arrow type="submit">Sign Up</Button>
             <span className="text-muted">
               Already have an account? <Link to="/login">Log in</Link>
@@ -77,6 +78,7 @@ export default function Signup() {
         </form>
         </Reveal>
       </div>
+    </div>
     </div>
   )
 }

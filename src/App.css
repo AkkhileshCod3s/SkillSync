@@ -1,10 +1,11 @@
 /* ============ Button animations (site-wide) ============ */
 .btn {
-  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
 }
 
 .btn:hover {
-  opacity: 0.88;
+  opacity: 0.92;
   transform: translateY(-2px);
   box-shadow: var(--shadow-subtle-2);
 }
@@ -15,8 +16,12 @@
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--color-forest-ink);
+  outline: 2px solid var(--color-black);
   outline-offset: 2px;
+}
+
+.sec--black .btn:focus-visible {
+  outline-color: var(--color-cream-text-on-black);
 }
 
 .btn[disabled] {
@@ -37,7 +42,7 @@
   transform: translateX(3px);
 }
 
-/* Pastel + outline buttons keep the same motion language */
+/* Outline + tab buttons keep the same motion language */
 .btn-pastel--mint,
 .btn-pastel--teal,
 .btn-pastel--blush,
@@ -74,7 +79,13 @@ textarea {
 input:hover:not(:focus),
 select:hover:not(:focus),
 textarea:hover:not(:focus) {
-  border-color: var(--color-forest-ink);
+  border-color: var(--color-black);
+}
+
+.sec--black input:hover:not(:focus),
+.sec--black select:hover:not(:focus),
+.sec--black textarea:hover:not(:focus) {
+  border-color: var(--color-cream-text-on-black);
 }
 
 /* Tag-input rows and plan-add keep inputs and buttons on one baseline */

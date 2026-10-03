@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { TaglineBadge, Button } from '../components/ui'
 import { LogoMark } from '../components/Navbar'
 import logoIcon from '../assets/logo-icon.png'
+import footerLogoIcon from '../assets/footer-logo-icon.png'
 import Reveal from '../components/Reveal'
 import Doodle from '../components/Doodle'
 import {
@@ -23,8 +24,8 @@ export default function Landing() {
   const navigate = useNavigate()
   return (
     <div className="landing">
-      {/* SECTION 2 — HERO */}
-      <section className="hero">
+      {/* SECTION 2 — HERO (cream) */}
+      <section className="sec sec--cream hero">
         {/* Decorative sketch doodles — hand-drawn monoline, Forest Ink, low opacity */}
         <svg style={sketchStyle} className="sketch sketch--swap" viewBox="0 0 120 60" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
           <path d="M10 22 h74" />
@@ -78,6 +79,21 @@ export default function Landing() {
           opacity={0.12}
         />
 
+        {/* Signature arc text — decorative, rotates slowly */}
+        <svg className="hero__arc" viewBox="0 0 400 400" aria-hidden="true">
+          <defs>
+            <path
+              id="hero-arc-circle"
+              d="M200,200 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0"
+            />
+          </defs>
+          <text>
+            <textPath href="#hero-arc-circle">
+              trade skills · grow together · trade skills · grow together ·
+            </textPath>
+          </text>
+        </svg>
+
         <Reveal delay={0}>
           <TaglineBadge icon={<Repeat size={16} />}>
             Learn something new, teach something you know
@@ -112,8 +128,8 @@ export default function Landing() {
         </Reveal>
       </section>
 
-      {/* SECTION 3 — HOW IT WORKS */}
-      <section className="section">
+      {/* SECTION 3 — HOW IT WORKS (black) */}
+      <section className="sec sec--black section">
         <Doodle
           icon={LoopIcon}
           desktop={{ top: 8, left: 24, size: 40, rotate: -7 }}
@@ -203,8 +219,8 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* SECTION 4 — WHY SKILLSYNC */}
-      <section className="section">
+      {/* SECTION 4 — WHY SKILLSYNC (cream) */}
+      <section className="sec sec--cream section">
         <Doodle
           icon={SquiggleIcon}
           desktop={{ top: 4, left: '6%', size: 44, rotate: -5 }}
@@ -274,8 +290,8 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* SECTION 5 — PERFECT MATCH CALLOUT */}
-      <section className="section">
+      {/* SECTION 5 — PERFECT MATCH CALLOUT (black) */}
+      <section className="sec sec--black section">
         <Doodle
           icon={BookIcon}
           desktop={{ top: -8, right: '4%', size: 44, rotate: 7 }}
@@ -326,8 +342,8 @@ export default function Landing() {
         </Reveal>
       </section>
 
-      {/* SECTION 6 — FINAL CTA */}
-      <section className="final-cta" style={{ position: 'relative' }}>
+      {/* SECTION 6 — FINAL CTA (cream) */}
+      <section className="sec sec--cream final-cta" style={{ position: 'relative' }}>
         <Doodle
           icon={SwapArrowsIcon}
           desktop={{ top: 24, left: 48, size: 48, rotate: -5 }}
@@ -384,8 +400,8 @@ export default function Landing() {
         </Reveal>
       </section>
 
-      {/* SECTION 7 — FOOTER (always visible, no Reveal) */}
-      <footer className="landing__footer" style={{ position: 'relative' }}>
+      {/* SECTION 7 — FOOTER (black, always visible, no Reveal) */}
+      <footer className="sec sec--black landing__footer" style={{ position: 'relative' }}>
         <Doodle
           icon={SquiggleIcon}
           desktop={{ top: -18, left: '4%', size: 42, rotate: -6 }}
@@ -397,7 +413,7 @@ export default function Landing() {
           opacity={0.12}
         />
         <div className="landing__footer-brand">
-          <img src={logoIcon} alt="SkillSync logo" width={28} height={28} />
+          <img src={footerLogoIcon} alt="SkillSync logo" width={32} height={32} />
           <span className="landing__footer-wordmark">SkillSync</span>
           <span className="landing__footer-tagline">Skill swap, not skill shop.</span>
         </div>

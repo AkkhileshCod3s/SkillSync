@@ -24,27 +24,28 @@ export default function LearningPlan() {
   }
 
   return (
-    <div className="page page--narrow section" style={{ position: 'relative' }}>
+    <div className="sec sec--cream" style={{ position: 'relative' }}>
       <Doodle
         icon={StarOutlineIcon}
-        desktop={{ top: 8, right: -8, size: 34, rotate: 8 }}
+        desktop={{ top: 8, right: 24, size: 34, rotate: 8 }}
         opacity={0.15}
       />
       <Doodle
         icon={SquiggleIcon}
-        desktop={{ bottom: -16, left: -12, size: 48, rotate: -4 }}
+        desktop={{ bottom: 24, left: 24, size: 48, rotate: -4 }}
         opacity={0.15}
       />
       <Doodle
         icon={LoopIcon}
-        desktop={{ top: '45%', right: -6, size: 26, rotate: 12 }}
+        desktop={{ top: '45%', right: 40, size: 26, rotate: 12 }}
         opacity={0.12}
       />
       <Doodle
         icon={BookIcon}
-        desktop={{ bottom: '20%', left: -8, size: 30, rotate: 8 }}
+        desktop={{ bottom: '20%', left: 32, size: 30, rotate: 8 }}
         opacity={0.12}
       />
+      <div className="page page--narrow section">
       <Reveal delay={0}>
         <div className="plan-title-row">
           <h1 className="page-heading">Learning Plan</h1>
@@ -98,6 +99,7 @@ export default function LearningPlan() {
           />
           <Button variant="primary-compact" arrow type="submit">Add milestone</Button>
         </form>
+      </div>
       </div>
     </div>
   )

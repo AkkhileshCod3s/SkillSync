@@ -34,7 +34,7 @@ export default function Explore() {
   }
 
   return (
-    <div className="page section" style={{ position: 'relative' }}>
+    <div className="sec sec--cream" style={{ position: 'relative' }}>
       <Doodle
         icon={StarOutlineIcon}
         desktop={{ top: 8, right: 40, size: 36, rotate: 7 }}
@@ -47,14 +47,15 @@ export default function Explore() {
       />
       <Doodle
         icon={LoopIcon}
-        desktop={{ top: '35%', left: 4, size: 30, rotate: 11 }}
+        desktop={{ top: '35%', left: 24, size: 30, rotate: 11 }}
         opacity={0.12}
       />
       <Doodle
         icon={LightbulbIcon}
-        desktop={{ top: '60%', right: 6, size: 34, rotate: -9 }}
+        desktop={{ top: '60%', right: 40, size: 34, rotate: -9 }}
         opacity={0.13}
       />
+      <div className="page section">
       <Reveal delay={0}>
         <h1 className="page-heading">Explore profiles</h1>
         <p className="page-sub">
@@ -125,6 +126,7 @@ export default function Explore() {
       {filtered.length === 0 && (
         <p className="text-muted">No profiles match those filters — try clearing one.</p>
       )}
+      </div>
     </div>
   )
 }
