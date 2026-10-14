@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="SkillSync — Swap skills, grow together" width="100%" />
+  <img src="assets/hero.svg" alt="SkillSync — Swap skills, grow together" width="100%" />
 </p>
 
 <p align="center">
