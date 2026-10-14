@@ -1,39 +1,31 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="SkillSync — Swap skills, grow together" width="100%" />
+  <img src="assets/hero.svg" alt="SkillSync — Skill swap, not skill shop." width="100%" />
 </p>
 
 <p align="center">
   <b>Skill swap, not skill shop.</b><br/>
-  <b>SkillSync</b> ek peer-to-peer skill-swapping platform hai jahan log <b>paise ki jagah knowledge trade karte hain</b>.<br/>
-  Batao tum kya sikha sakte ho aur kya seekhna chahte ho, aisa partner pao jiski skills tumhari skills ko complement kare, aur session schedule karo — <b>bilkul free</b>.
-</p>
-
-<p align="center">
-  <sub>free forever · no credit card · browse before you sign up</sub>
+  <b>SkillSync</b> is a peer-to-peer skill-swapping platform where people <b>trade knowledge instead of money</b>.<br/>
+  Tell us what you can teach and what you want to learn, get matched with a partner whose skills complement yours, and schedule a session — <b>completely free</b>.
 </p>
 
 <p align="center">
   <a href="https://skill-sync-edu.vercel.app/">
-    <img src="assets/button.svg" alt="Open the live app" />
+    <img src="assets/btn-create.svg" alt="Create My Profile" height="56" />
+  </a>
+  &nbsp;
+  <a href="https://skill-sync-edu.vercel.app/">
+    <img src="assets/btn-explore.svg" alt="Explore Profiles" height="56" />
   </a>
 </p>
 
-<p align="center">
-  <img src="assets/chip-vite.svg" alt="Vite 5" />
-  <img src="assets/chip-react.svg" alt="React 18" />
-  <img src="assets/chip-router.svg" alt="React Router 6" />
-  <img src="assets/chip-lucide.svg" alt="Lucide Icons" />
-  <img src="assets/chip-js.svg" alt="JavaScript" />
-  <img src="assets/chip-vercel.svg" alt="Vercel" />
-</p>
-
 <a name="contents"></a>
-<img src="assets/h-toc.svg" alt="Contents" width="100%" />
+<img src="assets/contents.svg" alt="Table of contents" width="100%" />
 
 <p align="center">
   <a href="#about">About</a> ·
   <a href="#how-it-works">How it works</a> ·
   <a href="#features">Features</a> ·
+  <a href="#try-it-live">Try it live</a> ·
   <a href="#tech-stack">Tech stack</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#scripts">Scripts</a> ·
@@ -44,66 +36,59 @@
   <a href="#credits">Credits</a>
 </p>
 
-<p align="center"><img src="assets/divider.svg" alt="" width="100%" /></p>
-
 <a name="about"></a>
-<img src="assets/h-about.svg" alt="About" width="100%" />
+<img src="assets/what-is.svg" alt="What is SkillSync?" width="100%" />
 
-<p align="center">
-  <img src="assets/scene-about.svg" alt="Trade knowledge, not money" width="100%" />
-</p>
-
-Aaj ke time mein seekhna aksar mehenga hota hai. **SkillSync** is idea par bana hai ki har kisi ke paas kuch sikhane ko hota hai aur kuch seekhne ko bhi. Tum apni skills list karte ho (jo sikha sakte ho) aur woh skills bhi (jo seekhna chahte ho), SkillSync tumhe aise logon se match karta hai jinki skills tumhari skills ko complement karti hain, aur phir tum ek session schedule kar lete ho. Paise ka koi lena-dena nahi.
+Learning is often expensive. **SkillSync** is built on the idea that everyone has something to teach and something to learn. You list the skills you can teach and the skills you want to learn, SkillSync matches you with people whose skills complement yours, and then you schedule a session. No money involved.
 
 > **Learn something new, teach something you know.**
-> Kuch naya seekhne ke liye koi fees nahi — bas apni ek skill do, badle mein jo skill chahiye wo lo.
+> There are no fees for learning something new. Just trade a skill you have for one you want.
+
+<p align="center">
+  <img src="assets/why.svg" alt="Free forever, no credit card, browse before you sign up" width="100%" />
+</p>
 
 - 🌐 **Live app:** https://skill-sync-edu.vercel.app/
 - 📦 **Repository:** https://github.com/AkkhileshCod3s/SkillSync
-- 💸 **Free forever** — koi credit card nahi chahiye
-- 👀 **Browse first** — profiles sign up karne se pehle bhi explore kar sakte ho
+- 💸 **Free forever** — no credit card required
+- 👀 **Browse first** — explore profiles before you even sign up
 
 <a name="how-it-works"></a>
-<img src="assets/h-how.svg" alt="How it works" width="100%" />
+<img src="assets/how-it-works.svg" alt="How it works" width="100%" />
 
-<p align="center">
-  <img src="assets/scene-how.svg" alt="List your skills, get matched, schedule a session" width="100%" />
-</p>
+1. **List your skills** — what you can teach and what you want to learn.
+2. **Get matched** — find a partner whose skills complement yours.
+3. **Schedule a session** — pick a time and learn from each other, completely free.
 
-1. **List your skills** — jo tum sikha sakte ho aur jo seekhna chahte ho.
-2. **Get matched** — aise partner se match ho jiski skills tumhari skills ko complement karti hain.
-3. **Schedule a session** — time fix karo aur ek-dusre se seekho, completely free.
-
-> 💡 **Tip:** shuru karne se pehle **Explore** mein profiles dekh sakte ho, sign up baad mein karo.
+> 💡 **Tip:** You can browse profiles in **Explore** before you start. Sign up later.
 
 <a name="features"></a>
-<img src="assets/h-features.svg" alt="Features" width="100%" />
-
 <p align="center">
-  <img src="assets/scene-features.svg" alt="Peer-to-peer, free, matching, scheduling" width="100%" />
+  <img src="assets/inside-the-app.svg" alt="Inside the app: Explore, Connections, Sessions, Learning Plan" width="100%" />
 </p>
 
-- **Peer-to-peer learning** — log ek-dusre ko sikhate hain, koi middleman nahi.
-- **Completely free** — knowledge ke badle knowledge, paisa nahi.
-- **Skill matching** — teach aur learn lists ke basis par complementary partners.
-- **Session scheduling** — match hone ke baad session book karo.
-- **Browse before you sign up** — pehle profiles dekho, phir decide karo.
+- **Peer-to-peer learning** — people teach each other, with no middleman.
+- **Completely free** — knowledge in exchange for knowledge, never money.
+- **Skill matching** — complementary partners based on your teach and learn lists.
+- **Session scheduling** — book a session once you are matched.
+- **Browse before you sign up** — look at profiles first, then decide.
 
-**App ke andar ke tabs** (navbar se):
+**Tabs inside the app** (from the navbar):
 
-| Tab | Kya hai |
+| Tab | What it is |
 |---|---|
-| **Explore** | Aise logon ke profiles browse karo jinse tum seekh sakte ho |
-| **Connections** | Jin logon se tum connect ho unhe ek jagah track karo |
-| **Sessions** | Tumhare learning sessions |
-| **Learning Plan** | Apna agla learning plan banao |
+| **Explore** | Browse profiles of people you can learn from |
+| **Connections** | Keep track of the people you connect with in one place |
+| **Sessions** | Your learning sessions |
+| **Learning Plan** | Plan what you want to learn next |
+
+<a name="try-it-live"></a>
+<img src="assets/try-it.svg" alt="Try it live" width="100%" />
+
+The app is live at **https://skill-sync-edu.vercel.app/**. Open it, browse a few profiles, and create your own when you are ready. No credit card needed.
 
 <a name="tech-stack"></a>
-<img src="assets/h-tech.svg" alt="Tech stack" width="100%" />
-
-<p align="center">
-  <img src="assets/scene-tech.svg" alt="Vite, React, React Router, Lucide, Instrument Serif and Inter, Vercel" width="100%" />
-</p>
+<img src="assets/tech-stack.svg" alt="Tech stack" width="100%" />
 
 | Area | Choice |
 |---|---|
@@ -116,13 +101,9 @@ Aaj ke time mein seekhna aksar mehenga hota hai. **SkillSync** is idea par bana 
 | Hosting | [Vercel](https://vercel.com/) |
 
 <a name="quick-start"></a>
-<img src="assets/h-setup.svg" alt="Quick start" width="100%" />
+<img src="assets/run-locally.svg" alt="Run it locally" width="100%" />
 
-<p align="center">
-  <img src="assets/scene-setup.svg" alt="Clone, enter, install, run" width="100%" />
-</p>
-
-**Prerequisites:** Node.js 18+ aur npm.
+**Prerequisites:** Node.js 18+ and npm.
 
 ```bash
 # 1. Clone
@@ -138,27 +119,19 @@ npm install
 npm run dev      # http://localhost:5173
 ```
 
-Browser mein `http://localhost:5173` kholo — app ready hai.
+Open `http://localhost:5173` in your browser and the app is ready.
 
 <a name="scripts"></a>
-<img src="assets/h-scripts.svg" alt="Scripts" width="100%" />
+<img src="assets/scripts.svg" alt="Scripts" width="100%" />
 
-<p align="center">
-  <img src="assets/scene-scripts.svg" alt="npm run dev, build, preview" width="100%" />
-</p>
-
-| Command | Kya karta hai |
+| Command | What it does |
 |---|---|
-| `npm run dev` | Vite dev server chalata hai (hot reload ke saath) |
-| `npm run build` | Production build `dist/` mein banata hai |
-| `npm run preview` | Production build ko locally serve karta hai |
+| `npm run dev` | Starts the Vite dev server (with hot reload) |
+| `npm run build` | Creates a production build in `dist/` |
+| `npm run preview` | Serves the production build locally |
 
 <a name="project-structure"></a>
-<img src="assets/h-structure.svg" alt="Project structure" width="100%" />
-
-<p align="center">
-  <img src="assets/scene-structure.svg" alt="Project structure overview" width="100%" />
-</p>
+<img src="assets/project-structure.svg" alt="Project structure" width="100%" />
 
 ```
 SkillSync/
@@ -173,20 +146,16 @@ SkillSync/
 ```
 
 <a name="deploy"></a>
-<img src="assets/h-deploy.svg" alt="Deploy" width="100%" />
+<img src="assets/deploy.svg" alt="Deploy on Vercel" width="100%" />
 
-<p align="center">
-  <img src="assets/scene-deploy.svg" alt="Build, dist, Vercel" width="100%" />
-</p>
+The app is a static Vite build and is live on **Vercel**: https://skill-sync-edu.vercel.app/
 
-App ek static Vite build hai, aur **Vercel** par live hai: https://skill-sync-edu.vercel.app/
-
-**Vercel par deploy karna**
-1. Repo ko Vercel mein import karo.
+**Deploying to Vercel**
+1. Import the repo into Vercel.
 2. Framework preset: **Vite**.
 3. Build command: `npm run build`, output directory: `dist`.
 
-> React Router use ho raha hai, isliye agar kisi page ka direct link (refresh par) 404 de, to saare routes ko `index.html` par rewrite karo. Vercel par root mein `vercel.json` banao:
+> Because React Router is used, a direct link to a page (or a refresh) may return a 404. To fix that, rewrite all routes to `index.html`. Create a `vercel.json` in the project root:
 >
 > ```json
 > {
@@ -195,46 +164,32 @@ App ek static Vite build hai, aur **Vercel** par live hai: https://skill-sync-ed
 > ```
 
 <a name="contributing"></a>
-<img src="assets/h-contrib.svg" alt="Contributing" width="100%" />
+<img src="assets/contributing.svg" alt="Come contribute" width="100%" />
 
-<p align="center">
-  <img src="assets/scene-contrib.svg" alt="Fork, branch, commit, pull request, merged" width="100%" />
-</p>
+1. **Fork** the repo and clone it.
+2. Create a new branch: `git switch -c my-feature`
+3. Make your changes and run `npm run build` to check that the build passes.
+4. Commit and open a **Pull Request**.
 
-1. Repo ko **fork** karo aur clone karo.
-2. Naya branch banao: `git switch -c my-feature`
-3. Changes karo aur `npm run build` chalake check karo ki build pass hota hai.
-4. Commit karo aur **Pull Request** kholo.
-
-Bug ya idea ho to [Issues](https://github.com/AkkhileshCod3s/SkillSync/issues) mein batao.
+Found a bug or have an idea? Let us know in [Issues](https://github.com/AkkhileshCod3s/SkillSync/issues).
 
 <a name="troubleshooting"></a>
-<img src="assets/h-trouble.svg" alt="Troubleshooting" width="100%" />
-
-<p align="center">
-  <img src="assets/scene-trouble.svg" alt="Common problems and fixes" width="100%" />
-</p>
+<img src="assets/troubleshooting.svg" alt="Troubleshooting" width="100%" />
 
 | Problem | Fix |
 |---|---|
-| Port `5173` busy hai | `npm run dev -- --port 3000` chalao ya dusra process band karo. |
-| `npm install` ya build fail ho raha hai | Node.js 18+ use karo, phir `node_modules` delete karke `npm install` dobara chalao. |
-| Deployed site par kisi page ka link 404 deta hai | Root mein `vercel.json` rewrite rule add karo (upar [Deploy](#deploy) section mein diya hai). |
+| Port `5173` is busy | Run `npm run dev -- --port 3000`, or stop the other process. |
+| `npm install` or the build fails | Use Node.js 18+, then delete `node_modules` and run `npm install` again. |
+| A page link returns 404 on the deployed site | Add the `vercel.json` rewrite rule to the project root (see the [Deploy](#deploy) section above). |
 
 <a name="credits"></a>
-<img src="assets/h-credits.svg" alt="Credits" width="100%" />
+<img src="assets/credits.svg" alt="Credits and thanks" width="100%" />
 
-<p align="center">
-  <img src="assets/scene-credits.svg" alt="Fonts, icons, tooling" width="100%" />
-</p>
-
-- Fonts: **Instrument Serif** aur **Inter** via Google Fonts.
+- Fonts: **Instrument Serif** and **Inter** via Google Fonts.
 - Icons: [Lucide](https://lucide.dev/).
-- Built with Vite, React aur React Router; hosted on Vercel.
+- Built with Vite, React and React Router; hosted on Vercel.
 - Made by [@AkkhileshCod3s](https://github.com/AkkhileshCod3s).
 
-<p align="center"><img src="assets/divider.svg" alt="" width="100%" /></p>
-
 <p align="center">
-  <sub>Swap skills, grow together. 🌱</sub>
+  <img src="assets/footer.svg" alt="Learn something new, teach something you know." width="100%" />
 </p>
