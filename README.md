@@ -3,8 +3,13 @@
 </p>
 
 <p align="center">
+  <b>Skill swap, not skill shop.</b><br/>
   <b>SkillSync</b> ek peer-to-peer skill-swapping platform hai jahan log <b>paise ki jagah knowledge trade karte hain</b>.<br/>
   Batao tum kya sikha sakte ho aur kya seekhna chahte ho, aisa partner pao jiski skills tumhari skills ko complement kare, aur session schedule karo — <b>bilkul free</b>.
+</p>
+
+<p align="center">
+  <sub>free forever · no credit card · browse before you sign up</sub>
 </p>
 
 <p align="center">
@@ -50,8 +55,13 @@
 
 Aaj ke time mein seekhna aksar mehenga hota hai. **SkillSync** is idea par bana hai ki har kisi ke paas kuch sikhane ko hota hai aur kuch seekhne ko bhi. Tum apni skills list karte ho (jo sikha sakte ho) aur woh skills bhi (jo seekhna chahte ho), SkillSync tumhe aise logon se match karta hai jinki skills tumhari skills ko complement karti hain, aur phir tum ek session schedule kar lete ho. Paise ka koi lena-dena nahi.
 
+> **Learn something new, teach something you know.**
+> Kuch naya seekhne ke liye koi fees nahi — bas apni ek skill do, badle mein jo skill chahiye wo lo.
+
 - 🌐 **Live app:** https://skill-sync-edu.vercel.app/
 - 📦 **Repository:** https://github.com/AkkhileshCod3s/SkillSync
+- 💸 **Free forever** — koi credit card nahi chahiye
+- 👀 **Browse first** — profiles sign up karne se pehle bhi explore kar sakte ho
 
 <a name="how-it-works"></a>
 <img src="assets/h-how.svg" alt="How it works" width="100%" />
@@ -64,6 +74,8 @@ Aaj ke time mein seekhna aksar mehenga hota hai. **SkillSync** is idea par bana 
 2. **Get matched** — aise partner se match ho jiski skills tumhari skills ko complement karti hain.
 3. **Schedule a session** — time fix karo aur ek-dusre se seekho, completely free.
 
+> 💡 **Tip:** shuru karne se pehle **Explore** mein profiles dekh sakte ho, sign up baad mein karo.
+
 <a name="features"></a>
 <img src="assets/h-features.svg" alt="Features" width="100%" />
 
@@ -75,6 +87,16 @@ Aaj ke time mein seekhna aksar mehenga hota hai. **SkillSync** is idea par bana 
 - **Completely free** — knowledge ke badle knowledge, paisa nahi.
 - **Skill matching** — teach aur learn lists ke basis par complementary partners.
 - **Session scheduling** — match hone ke baad session book karo.
+- **Browse before you sign up** — pehle profiles dekho, phir decide karo.
+
+**App ke andar ke tabs** (navbar se):
+
+| Tab | Kya hai |
+|---|---|
+| **Explore** | Aise logon ke profiles browse karo jinse tum seekh sakte ho |
+| **Connections** | Jin logon se tum connect ho unhe ek jagah track karo |
+| **Sessions** | Tumhare learning sessions |
+| **Learning Plan** | Apna agla learning plan banao |
 
 <a name="tech-stack"></a>
 <img src="assets/h-tech.svg" alt="Tech stack" width="100%" />
@@ -164,7 +186,13 @@ App ek static Vite build hai, aur **Vercel** par live hai: https://skill-sync-ed
 2. Framework preset: **Vite**.
 3. Build command: `npm run build`, output directory: `dist`.
 
-> React Router use ho raha hai, isliye agar kisi page ka direct link (refresh par) 404 de, to apne host par saare routes ko `index.html` par rewrite karo. Vercel par iske liye `vercel.json` mein ek rewrite rule add kar sakte ho.
+> React Router use ho raha hai, isliye agar kisi page ka direct link (refresh par) 404 de, to saare routes ko `index.html` par rewrite karo. Vercel par root mein `vercel.json` banao:
+>
+> ```json
+> {
+>   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+> }
+> ```
 
 <a name="contributing"></a>
 <img src="assets/h-contrib.svg" alt="Contributing" width="100%" />
@@ -191,7 +219,7 @@ Bug ya idea ho to [Issues](https://github.com/AkkhileshCod3s/SkillSync/issues) m
 |---|---|
 | Port `5173` busy hai | `npm run dev -- --port 3000` chalao ya dusra process band karo. |
 | `npm install` ya build fail ho raha hai | Node.js 18+ use karo, phir `node_modules` delete karke `npm install` dobara chalao. |
-| Deployed site par kisi page ka link 404 deta hai | Host par saare routes ko `index.html` par rewrite karo (React Router client-side routing use karta hai). |
+| Deployed site par kisi page ka link 404 deta hai | Root mein `vercel.json` rewrite rule add karo (upar [Deploy](#deploy) section mein diya hai). |
 
 <a name="credits"></a>
 <img src="assets/h-credits.svg" alt="Credits" width="100%" />
