@@ -1,4 +1,3 @@
-// Plain-JS helpers that simulate the SQL queries — replace with real API calls later.
 import { userById, skillNameById } from '../data/mockData'
 
 // users with teach/learn skills attached
